@@ -2,8 +2,8 @@ import React from "react";
 
 export default function Home() {
   return (
-    <header className="px-8 py-8 min-h-[550px]">
-      <div className="py-3 flex flex-row items-center justify-items-start justify-around border-2 bg-[#16b026d8] min-h-[450px]">
+    <header className="px-8 py-8 min-h-[550px] pt-36">
+      <div className="py-3 flex flex-row items-center justify-items-start justify-around border-2 bg-[#16b026d8] min-h-[450px] rounded-lg">
         <div className="flex flex-col items-center justify-center gap-20 w-2/5 text-left bg-h-full">
           <div className="text-7xl font-bold text-white tracking-normal">
             GenBi Cerdas Gizi Stop Stunting

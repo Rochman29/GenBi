@@ -1,17 +1,28 @@
 import React from "react";
-
-import "./App.css";
+import HomePages from "./pages/HomePages";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import StuntingPages from "./pages/StuntingPages";
 import Header from "./components/Header";
-import Home from "./components/Home";
-import DaftarIsi from "./components/DaftarIsi";
+import ScrollToTop from "./components/ScrollToTop";
+import PencegahanPages from "./pages/PencegahanPages";
+import DataPages from "./pages/DataPages";
+import FeedbackPages from "./pages/FeedbackPages";
 
 function App() {
   return (
-    <div className="bg-[#fbf5db] min-h-screen w-full">
+    <Router>
       <Header />
-      <Home />
-      <DaftarIsi />
-    </div>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/home" element={<HomePages />}></Route>
+        <Route path="*" element={<HomePages />}></Route>
+        <Route path="/" element={<HomePages />}></Route>
+        <Route path="/stunting" element={<StuntingPages />}></Route>
+        <Route path="/data" element={<DataPages />}></Route>
+        <Route path="/pencegahan" element={<PencegahanPages />}></Route>
+        <Route path="/feedback" element={<FeedbackPages />}></Route>
+      </Routes>
+    </Router>
   );
 }
 
